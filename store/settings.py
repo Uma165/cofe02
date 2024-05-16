@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+DOMAIN_NAME ='http://127.0.0.1:8000'
+
 
 # Application definition
 
@@ -37,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 
     'products',
     'users',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +138,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL ='users.User'
 LOGIN_URL = '/users/login/'
+
+# Stripe
+
+STRIPE_PUBLIC_KEY = 'pk_test_51PH3tvP0mff2wMeD7F1meNOfoFxl8x1Wmmti3rzKLSWweXBGRdkrupP31csoIBsOjjf5o0bcIumL3ByavXIOrZwX00jUMsaaWC'
+STRIPE_SECRET_KEY = 'sk_test_51PH3tvP0mff2wMeD22NDB0KIF4U7suVTrNPebpHH4DziJ5HqEcWJpKHv0DufktLRzG6j1QK8aQPW2xoX6OKx9YVd00S47mAsbV'
